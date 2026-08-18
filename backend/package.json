@@ -1,0 +1,43 @@
+{
+  "name": "sigo-cards-backend",
+  "version": "0.1.0",
+  "description": "Backend API for Sigo.Cards digital invitation platform",
+  "main": "dist/server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node --loader ts-node/esm src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "migrate": "node --loader ts-node/esm src/migrations/run.ts",
+    "seed": "node --loader ts-node/esm src/seeds/seed.ts"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "postgres": "^3.3.5",
+    "jsonwebtoken": "^9.0.2",
+    "bcryptjs": "^2.4.3",
+    "multer": "^1.4.5-lts.1",
+    "dotenv": "^16.3.1",
+    "cors": "^2.8.5",
+    "helmet": "^7.0.0",
+    "express-rate-limit": "^7.0.0",
+    "qrcode": "^1.5.3",
+    "uuid": "^9.0.0",
+    "csv-parse": "^5.4.1",
+    "nodemailer": "^6.9.5",
+    "twilio": "^3.93.0",
+    "sharp": "^0.32.6",
+    "redis": "^4.6.10",
+    "express-async-errors": "^3.1.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.18",
+    "@types/node": "^20.4.2",
+    "@types/jsonwebtoken": "^9.0.3",
+    "@types/multer": "^1.4.7",
+    "@types/bcryptjs": "^2.4.2",
+    "@types/uuid": "^9.0.2",
+    "typescript": "^5.1.6",
+    "ts-node": "^10.9.1"
+  }
+}
